@@ -16,6 +16,13 @@ mv ~/.local/share/nvim ~/.local/share/nvim.bak
 ```shell
 git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 ```
+##### powershell
+```powershell
+git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim $env:LOCALAPPDATA\nvim
+```
+
+
+
 
 #### Create a new user repository from this template
 
@@ -28,6 +35,11 @@ You can also just clone this repository directly if you do not want to track you
 ```shell
 git clone https://github.com/bad4iz/user_settings-AstroNvim_v3 ~/.config/nvim/lua/user
 ```
+##### powershell
+```powershell
+git clone https://github.com/bad4iz/user_settings-AstroNvim_v3 $env:LOCALAPPDATA\nvim\lua\user
+```
+
 
 #### Start Neovim
 
