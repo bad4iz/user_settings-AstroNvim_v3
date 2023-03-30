@@ -1,0 +1,99 @@
+{
+ 
+  "describe": {
+    "prefix": "desc",
+    "body": "describe('${1:description}', () => {\n\t${0}\n})"
+  },
+  "describe top level": {
+    "prefix": "dt",
+    "description": "Desc with it and AAA",
+    "body": [
+      "describe('${TM_FILENAME_BASE}', () => {",
+      " it('should ${0}',()=>{",
+      "    expect.hasAssertions();",
+      "    // Arrange (всякие моки)",
+      "    ",
+      "    // Act",
+      "    ${1}", 
+      "  ",  
+      "    // Assert",
+      "    expect(2).toBe(1);",
+      "  })",
+      "",
+      "})"
+      ]
+  },
+   "describe snapshot rtr": {
+    "prefix": "dts",
+    "description": "Desc [snapshot] react test renderer",
+    "body": [
+      "import React from 'react';",
+      "import renderer from 'react-test-renderer';",
+      "",
+      "import ${1:${TM_FILENAME_BASE}} from './${1:${TM_FILENAME_BASE}}'",
+      "",
+      "",
+      "describe('spec ${1:${TM_FILENAME_BASE}}', () => {",
+      "  it('[snaphot] ${1:${TM_FILENAME_BASE}}',()=>{",
+      "    expect.hasAssertions();",
+      "    // Arrange (всякие моки)",
+      "",
+      "    // Act",
+      "    const tree = renderer.create(<${2:${TM_FILENAME_BASE}} />).toJSON();",
+      "",
+      "    // Assert",
+      "    expect(tree).toMatchSnapshot();",
+      "  })",
+      "});"
+      ]
+  },
+"it asynchronous": {
+    "prefix": "it",
+    "description": "it by AAA",
+    "body": [
+      " it('should ${0}',()=>{",
+      "    expect.hasAssertions();",
+      "    // Arrange (всякие моки)",
+      "    ",
+      "    // Act",
+      "    ${1}", 
+      "  ",  
+      "    // Assert",
+      "    expect(2).toBe(1);",
+      "  })",
+      ""
+    ]
+  },
+  "it.todo": {
+    "prefix": "itt",
+    "body": "it.todo('${1:description}')"
+  },
+  "it with a callback": {
+    "prefix": "itd",
+    "body": "it('${1:description}', (done) => {\n\t${0}\n})"
+  },
+  "it synchronous": {
+    "prefix": "its",
+    "body": "it('${1:description}', () => {\n\t${0}\n})"
+  },
+  "before": {
+    "prefix": "bf",
+    "body": "before(async () => {\n\t${0}\n})"
+  },
+  "beforeAll": {
+    "prefix": "ba",
+    "body": "beforeAll(async () => {\n\t${0}\n})"
+  },
+  "beforeEach": {
+    "prefix": "bfe",
+    "body": "beforeEach(async () => {\n\t${0}\n})"
+  },
+  "after": {
+    "prefix": "aft",
+    "body": "after(() => {\n\t${0}\n})"
+  },
+  "afterEach": {
+    "prefix": "afe",
+    "body": "afterEach(() => {\n\t${0}\n})"
+  }
+}
