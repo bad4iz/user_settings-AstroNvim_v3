@@ -29,7 +29,7 @@ return {
     "hrsh7th/nvim-cmp",
     dependencies = {
       { "tzachar/cmp-tabnine", build = "pwsh.exe -file .\\install.ps1" },
-      { "hrsh7th/cmp-emoji", lazy = false },
+      { "hrsh7th/cmp-emoji",   lazy = false },
     },
     opts = function(_, opts)
       -- opts parameter is the default options table
@@ -38,14 +38,19 @@ return {
       -- modify the sources part of the options table
       opts.sources = cmp.config.sources {
         { name = "cmp_tabnine", priority = 1010 },
-        { name = "nvim_lsp", priority = 1000 },
-        { name = "luasnip", priority = 750 },
-        { name = "buffer", priority = 500 },
-        { name = "path", priority = 250 },
-        { name = "emoji", priority = 700 }, -- add new source
+        { name = "nvim_lsp",    priority = 1000 },
+        { name = "luasnip",     priority = 750 },
+        { name = "buffer",      priority = 500 },
+        { name = "path",        priority = 250 },
+        { name = "emoji",       priority = 700 }, -- add new source
       }
 
-      -- return the new table to be used
+      -- modify the mapping part of the table
+      -- opts.mapping["<C-j>"] = cmp.mapping.select_next_item()
+      opts.mapping["<C-Space>"] = cmp.mapping.complete()
+      opts.mapping["<C-m>"] = cmp.mapping.complete()
+
+      -- return the nw table to be used
       return opts
     end,
     lazy = false,
