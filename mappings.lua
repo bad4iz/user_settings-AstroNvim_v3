@@ -16,14 +16,15 @@ return {
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
-    ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<C-s>"] = { ":w!<cr>", desc = "Save File" }, -- change description but the same command
     ["<leader>le"] = { "<cmd>!eslint --fix %<cr>", desc = "Eslint fix" },
+    ["gh"] = { "<cmd>UndotreeToggle<cr>", desc = "History" },
   },
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
   },
   i = {
-    ["<C-s>"] = { "<esc>:w!<cr>", desc = "Save File" },  -- change description but the same command
-  }
+    ["<C-s>"] = { "<esc>:w!<cr>", desc = "Save File" }, -- change description but the same command
+  },
 }
