@@ -19,6 +19,9 @@ return {
     ["<C-s>"] = { ":w!<cr>", desc = "Save File" }, -- change description but the same command
     ["<leader>le"] = { "<cmd>!eslint --fix %<cr>", desc = "Eslint fix" },
     ["gh"] = { "<cmd>UndotreeToggle<cr>", desc = "History" },
+    -- Navigate buffers
+    ["<S-l>"] = { "<cmd>bnext<CR>", desc = "Next Buffer" },
+    ["<S-h>"] = { "<cmd>bprevious<CR>", desc = "Prev buffer" },
   },
   t = {
     -- setting a mapping to false will disable it
