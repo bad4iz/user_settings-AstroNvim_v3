@@ -17,7 +17,7 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
-    ["<leader>le"] = { "<cmd>eslint --fix %<cr>", desc = "Eslint fix" },
+    ["<leader>le"] = { "<cmd>!eslint --fix %<cr>", desc = "Eslint fix" },
   },
   t = {
     -- setting a mapping to false will disable it
