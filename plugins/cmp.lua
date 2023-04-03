@@ -47,8 +47,8 @@ return {
 
       -- modify the mapping part of the table
       -- opts.mapping["<C-j>"] = cmp.mapping.select_next_item()
-      opts.mapping["<C-Space>"] = cmp.mapping.complete()
-      opts.mapping["<C-m>"] = cmp.mapping.complete()
+      -- opts.mapping["<C-Space>"] = cmp.mapping.complete()
+      -- opts.mapping["<C-m>"] = cmp.mapping.complete()
 
       -- return the nw table to be used
       return opts

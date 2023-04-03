@@ -22,6 +22,7 @@ return {
     -- Navigate buffers
     ["<S-l>"] = { "<cmd>bnext<CR>", desc = "Next Buffer" },
     ["<S-h>"] = { "<cmd>bprevious<CR>", desc = "Prev buffer" },
+    ["gs"] = { "<Cmd>Sort<CR>", desc = "Sort" },
   },
   t = {
     -- setting a mapping to false will disable it
@@ -29,5 +30,8 @@ return {
   },
   i = {
     ["<C-s>"] = { "<esc>:w!<cr>", desc = "Save File" }, -- change description but the same command
+  },
+  v = {
+    ["gs"] = { "<Esc><Cmd>Sort<CR>", desc = "Sort" },
   },
 }
