@@ -1,3 +1,6 @@
+vim.cmd('set keymap=russian-jcukenwin')
+vim.cmd('set encoding=utf-8')
+
 return {
   -- Configure AstroNvim updates
   updater = {
