@@ -10,5 +10,7 @@ return {
   },
   "folke/tokyonight.nvim",
   { "wakatime/vim-wakatime", lazy = false },
-  { "mattn/emmet-vim",       lazy = false },
+  { "mattn/emmet-vim", lazy = false },
+  { "mfussenegger/nvim-dap", enabled = true, lazy = false },
+  { "Shatur/neovim-session-manager", enabled = false },
 }
