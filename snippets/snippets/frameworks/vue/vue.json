@@ -58,6 +58,30 @@
     ],
     "description": "Base for Vue File with SCSS"
   },
+
+  "Vue Single File Component Setup": {
+    "prefix": "vsetup",
+    "body": [
+      "<template>",
+      "\t<div>",
+      "",
+      "\t</div>",
+      "</template>",
+      "",
+      "<script setup>",
+      "\timport setup$TM_FILENAME_BASE from './setup.$TM_FILENAME_BASE';",
+      "\t\t",
+      "const { ${0} } = setup$TM_FILENAME_BASE();",
+      "\t",
+      "</script>",
+      "",
+      "<style lang=\"scss\" scoped>",
+      "",
+      "</style>"
+    ],
+    "description": "Setup for Vue File with SCSS"
+  },
+
   "Vue Single File Component with SASS": {
     "prefix": "vbase-sass",
     "body": [

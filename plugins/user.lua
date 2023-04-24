@@ -11,4 +11,5 @@ return {
   "folke/tokyonight.nvim",
   { "wakatime/vim-wakatime", lazy = false },
   { "mattn/emmet-vim",       lazy = false },
+  -- { 'nvim-neo-tree/neo-tree.nvim', enabled = false }
 }

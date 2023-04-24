@@ -1,4 +1,13 @@
 {
+  "export default": {
+    "prefix": "ed",
+    "body": "export default (${1:params}) => {\n\treturn ${0}\n}"
+  },
+  "export const ": {
+    "prefix": "ec",
+    "body": "export const ${TM_FILENAME_BASE} = (${1:params}) => {\n\treturn ${0}\n}"
+  },
+
   "setImmediate": {
     "prefix": "sim",
     "body": "setImmediate(() => {\n\t${0}\n})"
@@ -58,50 +67,6 @@
   "Promise.catch": {
     "prefix": "pc",
     "body": "${1:promise}.catch(error => {\n\t${0}\n})"
-  },
-  "describe": {
-    "prefix": "desc",
-    "body": "describe('${1:description}', () => {\n\t${0}\n})"
-  },
-  "describe top level": {
-    "prefix": "dt",
-    "body": "describe('${TM_FILENAME_BASE}', () => {\n\t${0}\n})"
-  },
-  "it asynchronous": {
-    "prefix": "it",
-    "body": "it('${1:description}', async () => {\n\t${0}\n})"
-  },
-  "it.todo": {
-    "prefix": "itt",
-    "body": "it.todo('${1:description}')"
-  },
-  "it with a callback": {
-    "prefix": "itd",
-    "body": "it('${1:description}', (done) => {\n\t${0}\n})"
-  },
-  "it synchronous": {
-    "prefix": "its",
-    "body": "it('${1:description}', () => {\n\t${0}\n})"
-  },
-  "before": {
-    "prefix": "bf",
-    "body": "before(async () => {\n\t${0}\n})"
-  },
-  "beforeAll": {
-    "prefix": "ba",
-    "body": "beforeAll(async () => {\n\t${0}\n})"
-  },
-  "beforeEach": {
-    "prefix": "bfe",
-    "body": "beforeEach(async () => {\n\t${0}\n})"
-  },
-  "after": {
-    "prefix": "aft",
-    "body": "after(() => {\n\t${0}\n})"
-  },
-  "afterEach": {
-    "prefix": "afe",
-    "body": "afterEach(() => {\n\t${0}\n})"
   },
   "require": {
     "prefix": "rq",
@@ -929,5 +894,10 @@
     "prefix": "setDate",
     "body": ["setDate($1);", "$0"],
     "description": "The setDate() method changes the day of the month of a given Date instance, based on local time."
+  },
+  "console log expression": {
+    "prefix": ".log",
+    "body": ["console.log(${1:expression}${TM_SELECTED_TEXT})"],
+    "description": "console log expression"
   }
 }
