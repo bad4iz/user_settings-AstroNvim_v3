@@ -1,5 +1,4 @@
 {
- 
   "describe": {
     "prefix": "desc",
     "body": "describe('${1:description}', () => {\n\t${0}\n})"
@@ -11,19 +10,20 @@
       "describe('${TM_FILENAME_BASE}', () => {",
       " it('should ${0}',()=>{",
       "    expect.hasAssertions();",
-      "    // Arrange (всякие моки)",
+      "    // ☣️ Arrange (всякие моки)",
       "    ",
-      "    // Act",
-      "    ${1}", 
-      "  ",  
-      "    // Assert",
+      "    ",
+      "    // 🔥 Act",
+      "    ${1}",
+      "  ",
+      "    // ❓ Assert",
       "    expect(2).toBe(1);",
       "  })",
       "",
       "})"
-      ]
+    ]
   },
-   "describe snapshot rtr": {
+  "describe snapshot rtr": {
     "prefix": "dts",
     "description": "Desc [snapshot] react test renderer",
     "body": [
@@ -41,13 +41,13 @@
       "    // Act",
       "    const tree = renderer.create(<${2:${TM_FILENAME_BASE}} />).toJSON();",
       "",
-      "    // Assert",
+      "    //❓ Assert",
       "    expect(tree).toMatchSnapshot();",
       "  })",
       "});"
-      ]
+    ]
   },
-"it asynchronous": {
+  "it asynchronous": {
     "prefix": "it",
     "description": "it by AAA",
     "body": [
@@ -56,9 +56,9 @@
       "    // Arrange (всякие моки)",
       "    ",
       "    // Act",
-      "    ${1}", 
-      "  ",  
-      "    // Assert",
+      "    ${1}",
+      "  ",
+      "    //❓ Assert",
       "    expect(2).toBe(1);",
       "  })",
       ""
