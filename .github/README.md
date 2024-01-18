@@ -18,7 +18,7 @@ git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 ```
 ##### powershell
 ```powershell
-git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim $env:LOCALAPPDATA\nvim
+git clone https://github.com/AstroNvim/AstroNvim $env:LOCALAPPDATA\nvim
 ```
 
 
