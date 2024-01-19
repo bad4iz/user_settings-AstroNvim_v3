@@ -6,4 +6,6 @@ return {
 
   -- { import = "astrocommunity.colorscheme.catppuccin" },
   -- { import = "astrocommunity.completion.copilot-lua-cmp", lazy = false },
+  { import = "astrocommunity.utility.noice-nvim", lazy = false },
 }
+
