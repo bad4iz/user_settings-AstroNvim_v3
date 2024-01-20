@@ -9,7 +9,6 @@ return {
 
   { import = "astrocommunity.code-runner.compiler-nvim", lazy = true },
 
-  { import = "astrocommunity.utility.noice-nvim", lazy = true },
   { import = "astrocommunity.editing-support.neogen", lazy = true },
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim", lazy = false },
   { import = "astrocommunity.editing-support.telescope-undo-nvim", lazy = false },
