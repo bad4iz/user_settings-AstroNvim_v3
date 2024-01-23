@@ -23,6 +23,6 @@ return {
   { import = "astrocommunity.pack.json", lazy = false },
   { import = "astrocommunity.pack.html-css", lazy = false },
   { import = "astrocommunity.register.nvim-neoclip-lua", lazy = false },
-  { import = "astrocommunity.scrolling.mini-animate", lazy = false },
+
   { import = "astrocommunity.workflow.bad-practices-nvim", lazy = false },
 }

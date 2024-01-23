@@ -3,7 +3,7 @@ return {
   event = { "User AstroFile", "InsertEnter" },
   keys = {
     {
-      "<leader>i",
+      "<leader>lt",
       desc = "Toggle CursorWord",
     },
   },
