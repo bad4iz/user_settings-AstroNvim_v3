@@ -121,6 +121,7 @@ return {
     ["gs"] = { "<Cmd>Sort<CR>", desc = "Sort" },
     ["<A-j>"] = { ":m .+1<CR>==", desc = "Move down" },
     ["<A-k>"] = { ":m .-2<CR>==", desc = "Move up" },
+    ["<c-C>"] = { ':let @+ = expand("%:.") .. ":" .. line(".") <cr>', desc = "copy path" },
     -- neotest
 
     ["<leader>mt"] = { ':lua require("neotest").run.run(vim.fn.expand("%")) <cr>', desc = "test" },
@@ -133,11 +134,13 @@ return {
     ["<C-s>"] = { "<esc>:w!<cr>", desc = "Save File" }, -- change description but the same command
     ["<A-j>"] = { ":m '>+1<CR>gv=gv", desc = "Move down" },
     ["<A-k>"] = { ":m '<-2<CR>gv=gv", desc = "Move up" },
+    ["<C-S-c>"] = { ':let @+ = "Line: " .. line(".") .. ", File: " .. expand("%:.") <cr>', desc = "copy path" },
   },
   v = {
     ["gs"] = { "<Esc><Cmd>Sort<CR>", desc = "Sort" },
     ["<A-j>"] = { ":m '>+1<CR>gv=gv", desc = "Move down" },
     ["<A-k>"] = { ":m '<-2<CR>gv=gv", desc = "Move up" },
     ["p"] = { '"_dP', desc = "" },
+    ["<C-S-c>"] = { ':let @+ = "Line: " .. line(".") .. ", File: " .. expand("%:.") <cr>', desc = "copy path" },
   },
 }
