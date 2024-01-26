@@ -7,6 +7,8 @@ return {
     spell = false,          -- sets vim.opt.spell
     signcolumn = "auto",    -- sets vim.opt.signcolumn to auto
     wrap = false,           -- sets vim.opt.wrap
+    scrolloff = 20 ,                          -- is one of my fav
+    sidescrolloff = 20
   },
   g = {
     mapleader = " ",                 -- sets vim.g.mapleader
@@ -28,3 +30,4 @@ return {
 --
 --   return local_vim
 -- end
+
