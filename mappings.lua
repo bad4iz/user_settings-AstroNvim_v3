@@ -102,6 +102,9 @@ vim.api.nvim_set_keymap(
 return {
   -- first key is the mode
   n = {
+
+    ["<leader>q"] = { "", desc = "Quit" },
+    ["<leader>qq"] = { "<cmd>confirm q<cr>", desc = "Quit" },
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
     ["<leader>bb"] = { "<cmd>tabnew<cr>", desc = "New tab" },
