@@ -64,6 +64,10 @@
       ""
     ]
   },
+  "jest mock": {
+    "prefix": "jm",
+    "body": "jest.mock('${1:url}')"
+  },
   "it.todo": {
     "prefix": "itt",
     "body": "it.todo('${1:description}')"
