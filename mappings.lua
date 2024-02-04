@@ -191,7 +191,7 @@ local COLEMAK_DH = {
   "~",
 }
 
-set_keymaps_from_arrays(RU_DH, COLEMAK_DH)
+-- set_keymaps_from_arrays(RU_DH, COLEMAK_DH)
 
 -- -- Вывод сообщения при нажатии на стрелку вверх
 vim.api.nvim_set_keymap(
