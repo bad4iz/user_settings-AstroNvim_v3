@@ -62,38 +62,44 @@ vim.api.nvim_set_keymap("n", "И", "B", {})
 vim.api.nvim_set_keymap("n", "Т", "N", {})
 vim.api.nvim_set_keymap("n", "Ь", "M", {})
 vim.api.nvim_set_keymap("n", "Б", "<", {})
+
 vim.api.nvim_set_keymap("n", "Ю", ">", {})
 vim.api.nvim_set_keymap("n", "Ё", "/|", {})
 vim.api.nvim_set_keymap("n", "х", "[", {})
-
+--
+-- vim.api.nvim_set_keymap("n", "m", "h", { noremap = true })
+-- vim.api.nvim_set_keymap("n", "n", "j", { noremap = true })
+-- vim.api.nvim_set_keymap("n", "e", "k", { noremap = true })
+-- vim.api.nvim_set_keymap("n", "i", "l", { noremap = true })
+--
 -- Вывод сообщения при нажатии на стрелку вверх
-vim.api.nvim_set_keymap(
-  "n",
-  "<Up>",
-  [[:lua print("Нажата стрелка вверх")<CR>]],
-  { noremap = true, silent = true }
-)
-
--- Аналогично для других стрелок
-vim.api.nvim_set_keymap(
-  "n",
-  "<Down>",
-  [[:lua print("Нажата стрелка вниз")<CR>]],
-  { noremap = true, silent = true }
-)
-vim.api.nvim_set_keymap(
-  "n",
-  "<Left>",
-  [[:lua print("Нажата стрелка влево")<CR>]],
-  { noremap = true, silent = true }
-)
-vim.api.nvim_set_keymap(
-  "n",
-  "<Right>",
-  [[:lua print("Нажата стрелка вправо")<CR>]],
-  { noremap = true, silent = true }
-)
-
+-- vim.api.nvim_set_keymap(
+--   "n",
+--   "<Up>",
+--   [[:lua print("Нажата стрелка вверх")<CR>]],
+--   { noremap = true, silent = true }
+-- )
+--
+-- -- Аналогично для других стрелок
+-- vim.api.nvim_set_keymap(
+--   "n",
+--   "<Down>",
+--   [[:lua print("Нажата стрелка вниз")<CR>]],
+--   { noremap = true, silent = true }
+-- )
+-- vim.api.nvim_set_keymap(
+--   "n",
+--   "<Left>",
+--   [[:lua print("Нажата стрелка влево")<CR>]],
+--   { noremap = true, silent = true }
+-- )
+-- vim.api.nvim_set_keymap(
+--   "n",
+--   "<Right>",
+--   [[:lua print("Нажата стрелка вправо")<CR>]],
+--   { noremap = true, silent = true }
+-- )
+--
 -- Mapping data with "desc" stored directly by vim.keymap.set().
 --
 -- Please use this mappings table to set keyboard mapping since this is the
