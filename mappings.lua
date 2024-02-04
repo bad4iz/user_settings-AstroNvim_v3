@@ -1,104 +1,225 @@
-vim.api.nvim_set_keymap("n", "й", "q", {})
-vim.api.nvim_set_keymap("n", "й", "q", {})
-vim.api.nvim_set_keymap("n", "ц", "w", {})
-vim.api.nvim_set_keymap("n", "у", "e", {})
-vim.api.nvim_set_keymap("n", "к", "r", {})
-vim.api.nvim_set_keymap("n", "е", "t", {})
-vim.api.nvim_set_keymap("n", "н", "y", {})
-vim.api.nvim_set_keymap("n", "г", "u", {})
-vim.api.nvim_set_keymap("n", "ш", "i", {})
-vim.api.nvim_set_keymap("n", "щ", "o", {})
-vim.api.nvim_set_keymap("n", "з", "p", {})
-vim.api.nvim_set_keymap("n", "ъ", "]", {})
-vim.api.nvim_set_keymap("n", "ф", "a", {})
-vim.api.nvim_set_keymap("n", "ы", "s", {})
-vim.api.nvim_set_keymap("n", "в", "d", {})
-vim.api.nvim_set_keymap("n", "а", "f", {})
-vim.api.nvim_set_keymap("n", "п", "g", {})
-vim.api.nvim_set_keymap("n", "р", "h", {})
-vim.api.nvim_set_keymap("n", "о", "j", {})
-vim.api.nvim_set_keymap("n", "л", "k", {})
-vim.api.nvim_set_keymap("n", "д", "l", {})
-vim.api.nvim_set_keymap("n", "ж", ";", {})
-vim.api.nvim_set_keymap("n", "э", "'", {})
-vim.api.nvim_set_keymap("n", "ё", "\\", {})
-vim.api.nvim_set_keymap("n", "я", "z", {})
-vim.api.nvim_set_keymap("n", "ч", "x", {})
-vim.api.nvim_set_keymap("n", "с", "c", {})
-vim.api.nvim_set_keymap("n", "м", "v", {})
-vim.api.nvim_set_keymap("n", "и", "b", {})
-vim.api.nvim_set_keymap("n", "т", "n", {})
-vim.api.nvim_set_keymap("n", "ь", "m", {})
-vim.api.nvim_set_keymap("n", "б", ",", {})
-vim.api.nvim_set_keymap("n", "ю", ".", {})
-vim.api.nvim_set_keymap("n", "Й", "Q", {})
-vim.api.nvim_set_keymap("n", "Ц", "W", {})
-vim.api.nvim_set_keymap("n", "У", "E", {})
-vim.api.nvim_set_keymap("n", "К", "R", {})
-vim.api.nvim_set_keymap("n", "Е", "T", {})
-vim.api.nvim_set_keymap("n", "Н", "Y", {})
-vim.api.nvim_set_keymap("n", "Г", "U", {})
-vim.api.nvim_set_keymap("n", "Ш", "I", {})
-vim.api.nvim_set_keymap("n", "Щ", "O", {})
-vim.api.nvim_set_keymap("n", "З", "P", {})
-vim.api.nvim_set_keymap("n", "Х", "{", {})
-vim.api.nvim_set_keymap("n", "Ъ", "}", {})
-vim.api.nvim_set_keymap("n", "Ф", "A", {})
-vim.api.nvim_set_keymap("n", "Ы", "S", {})
-vim.api.nvim_set_keymap("n", "В", "D", {})
-vim.api.nvim_set_keymap("n", "А", "F", {})
-vim.api.nvim_set_keymap("n", "П", "G", {})
-vim.api.nvim_set_keymap("n", "Р", "H", {})
-vim.api.nvim_set_keymap("n", "О", "J", {})
-vim.api.nvim_set_keymap("n", "Л", "K", {})
-vim.api.nvim_set_keymap("n", "Д", "L", {})
-vim.api.nvim_set_keymap("n", "Ж", ":", {})
-vim.api.nvim_set_keymap("n", "Э", '"', {})
-vim.api.nvim_set_keymap("n", "Я", "Z", {})
-vim.api.nvim_set_keymap("n", "Ч", "X", {})
-vim.api.nvim_set_keymap("n", "С", "C", {})
-vim.api.nvim_set_keymap("n", "М", "V", {})
-vim.api.nvim_set_keymap("n", "И", "B", {})
-vim.api.nvim_set_keymap("n", "Т", "N", {})
-vim.api.nvim_set_keymap("n", "Ь", "M", {})
-vim.api.nvim_set_keymap("n", "Б", "<", {})
+function set_keymap_all_modes(original_key, new_key)
+  -- Normal mode (n): Режим перемещения и выполнения команд. В этом режиме вы можете перемещаться по тексту и выполнять команды.
+  -- Visual mode (v): Режим выделения текста. В этом режиме вы можете выделять текст для копирования, вырезания или других операций.
+  -- Visual mode (выделение блока) (x): Режим выделения текста, но с акцентом на выделение символов. Используется, например, для удаления символов.
+  -- Select mode (s): Режим выделения текста. Аналогичен Visual mode, обычно используется в терминале.
+  -- Operator-pending mode (o): Режим, который следует за оператором и ожидает дополнительного ввода (например, d в dw).
+  -- Insert mode (i): Режим ввода текста. В этом режиме вы вводите текст непосредственно.
+  -- Visual Line mode (l): Режим выделения текста по строкам.
+  -- Command-line mode (c): Режим ввода команд. В этом режиме вы можете вводить команды для сохранения файла, поиска и других действий.
+  -- Terminal mode (t): Режим взаимодействия с терминалом.
+  -- Quickfix mode (q): Режим работы с окном быстрых исправлений.
 
-vim.api.nvim_set_keymap("n", "Ю", ">", {})
-vim.api.nvim_set_keymap("n", "Ё", "/|", {})
-vim.api.nvim_set_keymap("n", "х", "[", {})
+  -- local modes = { "n", "v", "x", "s", "o", "i", "l", "c", "t", "q" }
+  local modes = { "n", "v", "x", "s", "o", "l", "c", "t" }
+  for _, mode in ipairs(modes) do
+    vim.api.nvim_set_keymap(mode, original_key, new_key, { noremap = false, silent = false })
+  end
+end
+
+-- set_keymap_all_modes("ё", "\\")
+-- set_keymap_all_modes("Б", "<")
+-- set_keymap_all_modes("Ю", ">")
+-- set_keymap_all_modes("Ё", "/|")
+-- set_keymap_all_modes("х", "[")
 --
--- vim.api.nvim_set_keymap("n", "m", "h", { noremap = true })
--- vim.api.nvim_set_keymap("n", "n", "j", { noremap = true })
--- vim.api.nvim_set_keymap("n", "e", "k", { noremap = true })
--- vim.api.nvim_set_keymap("n", "i", "l", { noremap = true })
---
--- Вывод сообщения при нажатии на стрелку вверх
--- vim.api.nvim_set_keymap(
---   "n",
---   "<Up>",
---   [[:lua print("Нажата стрелка вверх")<CR>]],
---   { noremap = true, silent = true }
--- )
---
--- -- Аналогично для других стрелок
--- vim.api.nvim_set_keymap(
---   "n",
---   "<Down>",
---   [[:lua print("Нажата стрелка вниз")<CR>]],
---   { noremap = true, silent = true }
--- )
--- vim.api.nvim_set_keymap(
---   "n",
---   "<Left>",
---   [[:lua print("Нажата стрелка влево")<CR>]],
---   { noremap = true, silent = true }
--- )
--- vim.api.nvim_set_keymap(
---   "n",
---   "<Right>",
---   [[:lua print("Нажата стрелка вправо")<CR>]],
---   { noremap = true, silent = true }
--- )
+-- set_keymap_all_modes("m", "h")
+-- set_keymap_all_modes("n", "j")
+-- set_keymap_all_modes("N", "j")
+-- set_keymap_all_modes("e", "k")
+-- set_keymap_all_modes("i", "l")
+
+set_keymap_all_modes("J", "j")
+
+function set_keymaps_from_arrays(original_keys, new_keys)
+  for i, original_key in ipairs(original_keys) do
+    set_keymap_all_modes(original_key, new_keys[i])
+  end
+end
+
+-- Пример использования
+local RU_DH = {
+  "й",
+  "Й",
+  "ц",
+  "Ц",
+  "у",
+  "У",
+  "к",
+  "К",
+  "е",
+  "Е",
+  -- split
+  "н",
+  "Н",
+  "г",
+  "Г",
+  "ш",
+  "Ш",
+  "щ",
+  "Щ",
+  "з",
+  "З",
+  "х",
+  "Х",
+  -- middle row
+  "ф",
+  "Ф",
+  "ы",
+  "Ы",
+  "в",
+  "В",
+  "а",
+  "А",
+  "п",
+  "П",
+  -- split
+  "р",
+  "Р",
+  "e",
+  "E",
+  "л",
+  "Л",
+  "д",
+  "Д",
+  "ж",
+  "Ж",
+  "э",
+  "Э",
+  -- bottom row
+  "я",
+  "Я",
+  "ч",
+  "Ч",
+  "с",
+  "С",
+  "м",
+  "М",
+  "и",
+  "И",
+  -- split
+  "т",
+  "Т",
+  "ь",
+  "Ь",
+  "б",
+  "Б",
+  ".",
+  ",",
+  "ю",
+  "Ю",
+  "ъ",
+  "Ъ",
+  -- special
+  "ё",
+  "Ё",
+}
+local COLEMAK_DH = {
+  "q",
+  "Q",
+  "w",
+  "W",
+  "f",
+  "F",
+  "p",
+  "P",
+  "b",
+  "B",
+  -- split
+  "j",
+  "J",
+  "l",
+  "L",
+  "u",
+  "U",
+  "y",
+  "Y",
+  ";",
+  ":",
+  "[",
+  "{",
+  -- middle row
+  "a",
+  "A",
+  "r",
+  "R",
+  "s",
+  "S",
+  "t",
+  "T",
+  "g",
+  "G",
+  -- split
+  "m",
+  "M",
+  "n",
+  "N",
+  "e",
+  "E",
+  "i",
+  "I",
+  "o",
+  "O",
+  "'",
+  '"',
+  -- bottom row
+  "z",
+  "Z",
+  "x",
+  "X",
+  "c",
+  "C",
+  "d",
+  "D",
+  "v",
+  "V",
+  -- split
+  "k",
+  "K",
+  "h",
+  "H",
+  ",",
+  "<",
+  ".",
+  ">",
+  "/",
+  "?",
+  "]",
+  "}",
+  -- special
+  "`",
+  "~",
+}
+
+set_keymaps_from_arrays(RU_DH, COLEMAK_DH)
+
+-- -- Вывод сообщения при нажатии на стрелку вверх
+vim.api.nvim_set_keymap(
+  "n",
+  "<Up>",
+  [[:lua print("Нажата стрелка вверх")<CR>]],
+  { noremap = true, silent = true }
+)
+
+-- Аналогично для других стрелок
+vim.api.nvim_set_keymap(
+  "n",
+  "<Down>",
+  [[:lua print("Нажата стрелка вниз")<CR>]],
+  { noremap = true, silent = true }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<Left>",
+  [[:lua print("Нажата стрелка влево")<CR>]],
+  { noremap = true, silent = true }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<Right>",
+  [[:lua print("Нажата стрелка вправо")<CR>]],
+  { noremap = true, silent = true }
+)
 --
 -- Mapping data with "desc" stored directly by vim.keymap.set().
 --
@@ -132,8 +253,6 @@ return {
     ["<A-k>"] = { ":m .-2<CR>==", desc = "Move up" },
     ["<c-C>"] = { ':let @+ = expand("%:.") .. ":" .. line(".") <cr>', desc = "copy path" },
     -- neotest
-
-    ["<leader>mt"] = { ':lua require("neotest").run.run(vim.fn.expand("%")) <cr>', desc = "test" },
   },
   t = {
     -- setting a mapping to false will disable it
