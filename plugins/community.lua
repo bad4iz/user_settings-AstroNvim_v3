@@ -15,7 +15,7 @@ return {
   { import = "astrocommunity.editing-support.vim-move", lazy = false },
   { import = "astrocommunity.editing-support.wildfire-nvim", lazy = false },
   { import = "astrocommunity.motion.nvim-surround", lazy = false },
-  { import = "astrocommunity.motion.hop-nvim", lazy = false },
+  -- { import = "astrocommunity.motion.hop-nvim", lazy = false },
   { import = "astrocommunity.pack.typescript", lazy = false },
   { import = "astrocommunity.pack.tailwindcss", lazy = false },
   { import = "astrocommunity.pack.vue", lazy = false },
