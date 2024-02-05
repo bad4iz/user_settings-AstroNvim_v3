@@ -46,3 +46,11 @@ git clone https://github.com/bad4iz/user_settings-AstroNvim_v3 $env:LOCALAPPDATA
 ```shell
 nvim
 ```
+
+
+### deleting
+```shell
+rm -rf ~/.local/share/nvim
+rm -rf ~/.local/state/nvim
+rm -rf ~/.cache/nvim
+```
