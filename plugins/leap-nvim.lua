@@ -2,8 +2,8 @@ return {
   {
     "ggandor/leap.nvim",
     keys = {
-      -- { "t", "<Plug>(leap-forward-to)", mode = { "n" }, desc = "Leap forward to" },
-      -- { "T", "<Plug>(leap-backward-to)", mode = { "n" }, desc = "Leap backward to" },
+      { "t", "<Plug>(leap-forward-to)", mode = { "n" }, desc = "Leap forward to" },
+      { "T", "<Plug>(leap-backward-to)", mode = { "n" }, desc = "Leap backward to" },
     },
     opts = {},
     init = function() -- https://github.com/ggandor/leap.nvim/issues/70#issuecomment-1521177534

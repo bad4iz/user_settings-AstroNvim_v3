@@ -13,7 +13,7 @@ function set_keymap_all_modes(original_key, new_key)
   -- local modes = { "n", "v", "x", "s", "o", "i", "l", "c", "t", "q" }
   local modes = { "n", "v", "x", "s", "o", "l", "c", "t" }
   for _, mode in ipairs(modes) do
-    vim.api.nvim_set_keymap(mode, original_key, new_key, { noremap = false, silent = false })
+    vim.api.nvim_set_keymap(mode, original_key, new_key, { noremap = true, silent = false })
   end
 end
 
@@ -28,8 +28,19 @@ end
 -- set_keymap_all_modes("N", "j")
 -- set_keymap_all_modes("e", "k")
 -- set_keymap_all_modes("i", "l")
+-- set_keymap_all_modes("J", "j")
 
-set_keymap_all_modes("J", "j")
+-- set_keymap_all_modes("m", "h")
+-- set_keymap_all_modes("n", "j")
+-- set_keymap_all_modes("e", "k")
+-- set_keymap_all_modes("i", "l")
+--
+-- set_keymap_all_modes("I", "<cmd>bprevious<CR>")
+-- set_keymap_all_modes("M", "<cmd>bnext<CR>")
+--
+-- set_keymap_all_modes("j", "e")
+-- set_keymap_all_modes("k", "n")
+-- set_keymap_all_modes("l", "i")
 
 function set_keymaps_from_arrays(original_keys, new_keys)
   for i, original_key in ipairs(original_keys) do
@@ -252,7 +263,9 @@ return {
     ["<A-j>"] = { ":m .+1<CR>==", desc = "Move down" },
     ["<A-k>"] = { ":m .-2<CR>==", desc = "Move up" },
     ["<c-C>"] = { ':let @+ = expand("%:.") .. ":" .. line(".") <cr>', desc = "copy path" },
-    -- neotest
+
+    ["ge"] = { function() vim.diagnostic.goto_next() end, desc = "next error" },
+    ["gE"] = { function() vim.diagnostic.goto_prev() end, desc = "prev error" },
   },
   t = {
     -- setting a mapping to false will disable it
