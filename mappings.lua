@@ -283,5 +283,9 @@ return {
     ["<A-k>"] = { ":m '<-2<CR>gv=gv", desc = "Move up" },
     ["p"] = { '"_dP', desc = "" },
     ["<C-S-c>"] = { ':let @+ = "Line: " .. line(".") .. ", File: " .. expand("%:.") <cr>', desc = "copy path" },
+    ["<s-j>"] = { "j", desc = "" },
+    ["<s-l>"] = { "l", desc = "" },
+    ["<s-h>"] = { "h", desc = "" },
+    ["<s-k>"] = { "k", desc = "" },
   },
 }
