@@ -205,32 +205,32 @@ local COLEMAK_DH = {
 -- set_keymaps_from_arrays(RU_DH, COLEMAK_DH)
 
 -- -- Вывод сообщения при нажатии на стрелку вверх
-vim.api.nvim_set_keymap(
-  "n",
-  "<Up>",
-  [[:lua print("Нажата стрелка вверх")<CR>]],
-  { noremap = true, silent = true }
-)
-
--- Аналогично для других стрелок
-vim.api.nvim_set_keymap(
-  "n",
-  "<Down>",
-  [[:lua print("Нажата стрелка вниз")<CR>]],
-  { noremap = true, silent = true }
-)
-vim.api.nvim_set_keymap(
-  "n",
-  "<Left>",
-  [[:lua print("Нажата стрелка влево")<CR>]],
-  { noremap = true, silent = true }
-)
-vim.api.nvim_set_keymap(
-  "n",
-  "<Right>",
-  [[:lua print("Нажата стрелка вправо")<CR>]],
-  { noremap = true, silent = true }
-)
+-- vim.api.nvim_set_keymap(
+--   "n",
+--   "<Up>",
+--   [[:lua print("Нажата стрелка вверх")<CR>]],
+--   { noremap = true, silent = true }
+-- )
+--
+-- -- Аналогично для других стрелок
+-- vim.api.nvim_set_keymap(
+--   "n",
+--   "<Down>",
+--   [[:lua print("Нажата стрелка вниз")<CR>]],
+--   { noremap = true, silent = true }
+-- )
+-- vim.api.nvim_set_keymap(
+--   "n",
+--   "<Left>",
+--   [[:lua print("Нажата стрелка влево")<CR>]],
+--   { noremap = true, silent = true }
+-- )
+-- vim.api.nvim_set_keymap(
+--   "n",
+--   "<Right>",
+--   [[:lua print("Нажата стрелка вправо")<CR>]],
+--   { noremap = true, silent = true }
+-- )
 --
 -- Mapping data with "desc" stored directly by vim.keymap.set().
 --
