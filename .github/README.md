@@ -37,7 +37,7 @@ git clone https://github.com/bad4iz/user_settings-AstroNvim_v3 ~/.config/nvim/lu
 ```
 ##### powershell
 ```powershell
-git clone https://github.com/bad4iz/user_settings-AstroNvim_v3 $env:LOCALAPPDATA\nvim\lua\user
+git clone git@github.com:bad4iz/user_settings-AstroNvim_v3.git $env:LOCALAPPDATA\nvim\lua\user
 ```
 
 
