@@ -11,12 +11,16 @@ function set_keymap_all_modes(original_key, new_key)
   -- Quickfix mode (q): Режим работы с окном быстрых исправлений.
 
   -- local modes = { "n", "v", "x", "s", "o", "i", "l", "c", "t", "q" }
-  local modes = { "n", "v", "x", "s", "o", "l", "c", "t" }
+  local modes = { "n", "v", "x", "s", "o", "l" }
   for _, mode in ipairs(modes) do
     vim.api.nvim_set_keymap(mode, original_key, new_key, { noremap = true, silent = false })
   end
 end
 
+set_keymap_all_modes("<left>", "h")
+set_keymap_all_modes("<right>", "l")
+set_keymap_all_modes("<down>", "j")
+set_keymap_all_modes("<up>", "k")
 -- set_keymap_all_modes("ё", "\\")
 -- set_keymap_all_modes("Б", "<")
 -- set_keymap_all_modes("Ю", ">")
