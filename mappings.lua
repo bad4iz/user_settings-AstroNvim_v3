@@ -17,10 +17,15 @@ function set_keymap_all_modes(original_key, new_key)
   end
 end
 
-set_keymap_all_modes("<left>", "h")
-set_keymap_all_modes("<right>", "l")
-set_keymap_all_modes("<down>", "j")
-set_keymap_all_modes("<up>", "k")
+-- set_keymap_all_modes("<left>", "h")
+-- set_keymap_all_modes("<right>", "l")
+-- set_keymap_all_modes("<down>", "j")
+-- set_keymap_all_modes("<up>", "k")
+
+-- NOTE: копирование/вставка
+set_keymap_all_modes("<c-c>", "y")
+set_keymap_all_modes("<c-v>", "p")
+
 -- set_keymap_all_modes("ё", "\\")
 -- set_keymap_all_modes("Б", "<")
 -- set_keymap_all_modes("Ю", ">")
@@ -206,7 +211,7 @@ local COLEMAK_DH = {
   "~",
 }
 
--- set_keymaps_from_arrays(RU_DH, COLEMAK_DH)
+set_keymaps_from_arrays(RU_DH, COLEMAK_DH)
 
 -- -- Вывод сообщения при нажатии на стрелку вверх
 -- vim.api.nvim_set_keymap(
@@ -261,8 +266,8 @@ return {
     ["<leader>le"] = { "<cmd>!eslint --fix %<cr>", desc = "Eslint fix" },
     ["gh"] = { "<cmd>UndotreeToggle<cr>", desc = "History" },
     -- Navigate buffers
-    ["<S-l>"] = { "<cmd>bnext<CR>", desc = "Next Buffer" },
-    ["<S-h>"] = { "<cmd>bprevious<CR>", desc = "Prev buffer" },
+    ["<Tab>"] = { "<cmd>bnext<CR>", desc = "Next Buffer" },
+    ["<S-Tab>"] = { "<cmd>bprevious<CR>", desc = "Prev buffer" },
     ["gs"] = { "<Cmd>Sort<CR>", desc = "Sort" },
     ["<A-j>"] = { ":m .+1<CR>==", desc = "Move down" },
     ["<A-k>"] = { ":m .-2<CR>==", desc = "Move up" },

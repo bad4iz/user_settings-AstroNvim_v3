@@ -25,4 +25,6 @@ return {
   { import = "astrocommunity.register.nvim-neoclip-lua", lazy = false },
 
   { import = "astrocommunity.workflow.bad-practices-nvim", lazy = false },
+
+  -- { import = "astrocommunity.lsp.lsp-lens-nvim", lazy = false },
 }
