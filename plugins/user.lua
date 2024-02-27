@@ -13,4 +13,5 @@ return {
   { "mattn/emmet-vim", lazy = false },
   { "mfussenegger/nvim-dap", enabled = true, lazy = false },
   { "Shatur/neovim-session-manager", enabled = false },
+  { "nvim-treesitter/playground", lazy = false, event = "BufRead" },
 }

@@ -124,5 +124,22 @@
   "afterEach": {
     "prefix": "afe",
     "body": "afterEach(() => {\n\t${0}\n})"
+  },
+  "mockDefault": {
+    "prefix": "mcd",
+    "body": [
+      "/**",
+      "* Mock Default.",
+      "*",
+      "* @returns {void}",
+      "*/",
+      "const mockDefault = () => {",
+      "",
+      "}"
+    ]
+  },
+  "vi mock": {
+    "prefix": "vm",
+    "body": "vi.mock('${1:url}')"
   }
 }

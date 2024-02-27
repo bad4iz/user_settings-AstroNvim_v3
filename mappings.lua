@@ -13,7 +13,7 @@ function set_keymap_all_modes(original_key, new_key)
   -- local modes = { "n", "v", "x", "s", "o", "i", "l", "c", "t", "q" }
   local modes = { "n", "v", "x", "s", "o", "l" }
   for _, mode in ipairs(modes) do
-    vim.api.nvim_set_keymap(mode, original_key, new_key, { noremap = true, silent = false })
+    -- vim.api.nvim_set_keymap(mode, original_key, new_key, { noremap = true, silent = false })
   end
 end
 
@@ -275,6 +275,7 @@ return {
 
     ["ge"] = { function() vim.diagnostic.goto_next() end, desc = "next error" },
     ["gE"] = { function() vim.diagnostic.goto_prev() end, desc = "prev error" },
+    ["<leader>hc"] = { function() require("console_log").console() end, desc = "console log" },
   },
   t = {
     -- setting a mapping to false will disable it
