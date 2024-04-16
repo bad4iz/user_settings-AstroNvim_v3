@@ -1,3 +1,3 @@
 return {
-  "bad4iz/console.log.nvim",
+  -- "bad4iz/console.log.nvim",
 }

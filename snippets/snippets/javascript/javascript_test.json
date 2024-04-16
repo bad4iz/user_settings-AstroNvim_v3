@@ -107,8 +107,9 @@
   "vitest mock useReactQuery": {
     "prefix": "vmrq",
     "body": [
+      "import {useMutationAdaptor, useQueryAdaptor } from 'core/utils/hooks/useReactQuery';",
       "",
-      "jest.mock('core/utils/hooks/useReactQuery');",
+      "vi.mock('core/utils/hooks/useReactQuery');",
       "",
       "",
       "/**",
